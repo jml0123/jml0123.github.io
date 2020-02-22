@@ -65,7 +65,7 @@ section[role=content-header] {
     flex-direction: column;
     padding: 22px;
     min-height: 280px;
-    flex-grow: 1;
+    flex-shrink: 0;
     margin-top: 50px;
 }
 
@@ -110,7 +110,7 @@ section[role="content"] {
     display: flex;
     flex-direction: column;
     flex-basis: 60vh;
-    flex-grow: 2;
+    flex-grow: 1;
     position: relative;
 }
 
@@ -233,6 +233,9 @@ section[role="content"] {
 .grid-item-4 { grid-area: 3 / 3 / 5 / 5; }
 .grid-item-5 { grid-area: 3 / 1 / 5 / 3; }
 
+.intro {
+    overflow: hidden;
+}
 .intro-wrapper {
     display: flex;
     width: 100vw;
@@ -260,14 +263,14 @@ footer {
     justify-content: center;
     min-width: 100vw;
     background: grey;
-    position: relative;
+    flex-shrink: 0;
 }
 
 .cta-wrapper-fixed {
     position: fixed;
     right: 5%;
     bottom: 2%;
-    z-index: 2;
+    z-index: 1;
 }
 
 .cta-wrapper-fixed > .contact-icon {

@@ -26,6 +26,7 @@ body {
     background: $defaultBg;
     max-height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 .works {
     overflow: auto;

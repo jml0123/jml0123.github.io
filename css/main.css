@@ -6,7 +6,12 @@ body {
   font-family: sans-serif;
   margin: 0;
   background: #fcfcfc;
-  max-height: 100vh; }
+  max-height: 100vh;
+  overflow: hidden; }
+
+.works {
+  overflow: auto;
+  max-height: none; }
 
 .nav {
   z-index: 2;

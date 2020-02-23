@@ -24,6 +24,7 @@ body {
 }
 
 .nav {
+    z-index: 2;
     width: 100vw;
     height: 70px;
     background: $defaultBg;
@@ -57,13 +58,12 @@ body {
 
 
 main {
-    height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 .works {
-    overflow: auto;
+    max-height: auto;
 }
 
 section {

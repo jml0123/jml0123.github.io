@@ -51,7 +51,7 @@ section {
     padding: 22px;
     min-height: 20vh;
     flex-shrink: 0;
-    margin-top: 50px; }
+    margin-top: 10.75%; }
   section[role="content"] {
     flex-basis: 60vh;
     flex: 1; }

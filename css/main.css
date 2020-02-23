@@ -32,7 +32,11 @@ body {
 main {
   height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow: hidden; }
+
+.works {
+  overflow: auto; }
 
 section {
   width: 100vw;
@@ -41,12 +45,12 @@ section {
   position: relative; }
   section[role="content-header"] {
     padding: 22px;
-    min-height: 280px;
+    min-height: 20vh;
     flex-shrink: 0;
     margin-top: 50px; }
   section[role="content"] {
     flex-basis: 60vh;
-    flex-grow: 1; }
+    flex: 1; }
 
 .content-heading {
   font-family: "Roboto", sans-serif;
@@ -198,21 +202,27 @@ section {
       font-family: "Work Sans", sans-serif; }
 
 footer {
-  display: flex;
+  display: none;
   min-height: 95px;
   align-items: center;
   justify-content: center;
   min-width: 100vw;
   flex-shrink: 0; }
 
-.cta-wrapper-fixed {
+.cta-wrapper--fixed {
   position: fixed;
   right: 5%;
-  bottom: 2%;
-  z-index: 1; }
-.cta-wrapper .contact-icon {
-  height: 70px;
-  width: 70px; }
+  bottom: 2.5%;
+  z-index: 1;
+  animation: spin 6666ms linear infinite; }
+.cta-wrapper .contact-img {
+  border-radius: 100%;
+  border: 3px solid transparent; }
+  .cta-wrapper .contact-img--wrapper img {
+    height: 50px;
+    width: 50px; }
+  .cta-wrapper .contact-img:hover {
+    border: 3px solid yellow; }
 
 .bio-container {
   display: flex;
@@ -220,7 +230,9 @@ footer {
   align-items: left;
   padding: 22px; }
   .bio-container--image {
-    width: 190px; }
+    min-width: 150px;
+    width: 53%;
+    max-width: 190px; }
 .bio-wrapper p {
   font-size: 1.22em;
   line-height: 1.3;
@@ -230,48 +242,70 @@ footer {
   border-radius: 100%;
   border: 2px solid black; }
 
-.contact-img-wrapper {
-  width: 44px; }
-  .contact-img-wrapper img {
-    max-width: 100%; }
-.contact-wrapper {
-  height: 100%;
-  width: 100vw; }
-.contact-form {
-  box-shadow: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 5% 22px;
+.contact {
   background: #e6e6e6; }
-  .contact-form input {
-    min-width: 70px;
-    font-size: 1.2em;
-    height: 40px;
-    margin-bottom: 22px;
-    text-align: center; }
-    .contact-form input[name="name"] {
-      flex-basis: 36.66%; }
-    .contact-form input[name="email"] {
-      flex-basis: 60%; }
-    .contact-form input[name="topic"] {
-      width: 100%; }
-    .contact-form input[type="submit"] {
-      color: white;
-      box-shadow: none;
-      border: 0;
-      padding: 0;
-      background: #32D85E;
-      margin: 5% auto 0;
-      width: 150px;
-      border-radius: 120px; }
-  .contact-form textarea {
-    text-align: left;
-    padding: 3%;
-    width: 100%;
-    height: 17vh;
-    max-height: 400px;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif; }
+  .contact-img-wrapper {
+    width: 44px; }
+    .contact-img-wrapper img {
+      max-width: 100%; }
+  .contact-wrapper {
+    height: 100%;
+    width: 100vw; }
+  .contact-form {
+    box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5% 22px; }
+    .contact-form input {
+      min-width: 70px;
+      font-size: 1.2em;
+      height: 40px;
+      margin-bottom: 22px;
+      text-align: center; }
+      .contact-form input[name="name"] {
+        flex-basis: 36.66%; }
+      .contact-form input[name="email"] {
+        flex-basis: 60%; }
+      .contact-form input[name="topic"] {
+        width: 100%; }
+      .contact-form input[type="submit"] {
+        color: white;
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+        background: #32D85E;
+        margin: 5% auto 0;
+        width: 150px;
+        border-radius: 120px; }
+    .contact-form textarea {
+      text-align: left;
+      padding: 3%;
+      width: 100%;
+      height: 17vh;
+      max-height: 400px;
+      font-size: 20px;
+      font-family: "Roboto", sans-serif; }
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=main.css.map */

@@ -60,6 +60,10 @@ main {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+.works {
+    overflow: auto;
 }
 
 section {
@@ -69,13 +73,13 @@ section {
     position: relative;
     &[role="content-header"] {
         padding: $paddingDefault;
-        min-height: 280px;
+        min-height: 20vh;
         flex-shrink: 0;
         margin-top: 50px;
     }
     &[role="content"] {
         flex-basis: 60vh;
-        flex-grow: 1;
+        flex: 1;
     }
 }
 
@@ -101,7 +105,7 @@ section {
             text-align: center;
             width: 100%;
             display: flex;
-            align-items: center;
+            align-items: center; 
             justify-content: center;
         }
         &--contact {
@@ -110,7 +114,6 @@ section {
         }
     }
 }
-
 
 
 .carousel {
@@ -270,7 +273,7 @@ section {
 }
 
 footer {
-    display:flex;
+    display: none;
     min-height: 95px;
     align-items: center;
     justify-content: center;
@@ -278,16 +281,26 @@ footer {
     flex-shrink: 0;
 }
 
-.cta-wrapper{
-    &-fixed {
+.cta-wrapper {
+    &--fixed {
     position: fixed;
     right: 5%;
-    bottom: 2%;
+    bottom: 2.5%;
     z-index: 1;
+    animation: spin 6666ms linear infinite;
     }
-    .contact-icon {
-        height: 70px;
-        width: 70px;
+    .contact-img {
+        border-radius: 100%;
+        border: 3px solid transparent;
+        &--wrapper {
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        }
+        &:hover {
+            border: 3px solid yellow;
+        }
     }
 }
 
@@ -299,13 +312,15 @@ footer {
         align-items: left;
         padding: $paddingDefault; 
         &--image {
-            width: 190px;
+            min-width: 150px;
+            width: 53%;
+            max-width: 190px;
         }
     }
     &-wrapper {
         p {
             font-size: 1.22em;
-            line-height: 1.3;
+            line-height: $contentLineHeight;
             width: 89%;  
         }
     }
@@ -318,6 +333,7 @@ footer {
 
 
 .contact {
+    background: #e6e6e6;
     &-img-wrapper{
         width: 44px;
         img {
@@ -334,7 +350,7 @@ footer {
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 5% $paddingDefault;
-        background: #e6e6e6;
+    
         input {
             min-width: 70px;
             font-size: 1.2em;
@@ -375,5 +391,31 @@ footer {
 }
 
 
-
-
+@-ms-keyframes spin { 
+    from { 
+        -ms-transform: rotate(0deg); 
+    } to { 
+        -ms-transform: rotate(360deg); 
+    }
+}
+@-moz-keyframes spin { 
+    from { 
+        -moz-transform: rotate(0deg); 
+    } to { 
+        -moz-transform: rotate(360deg); 
+    }
+}
+@-webkit-keyframes spin { 
+    from { 
+        -webkit-transform: rotate(0deg); 
+    } to { 
+        -webkit-transform: rotate(360deg); 
+    }
+}
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}

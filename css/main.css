@@ -61,15 +61,18 @@ section {
   font-weight: 900;
   margin-bottom: 0;
   font-size: 3.5em;
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-width: 1.66px;
   letter-spacing: 1.35px;
   color: transparent; }
   .content-heading--work {
-    -webkit-text-stroke-color: #0DCF40; }
+    -webkit-text-stroke-color: #0DCF40;
+    filter: drop-shadow(1px 1px 65px #0DCF40); }
   .content-heading--bio {
-    -webkit-text-stroke-color: #F0B109; }
+    -webkit-text-stroke-color: #F0B109;
+    filter: drop-shadow(1px 1px 65px #F0B109); }
   .content-heading--contact {
-    -webkit-text-stroke-color: #0E6898; }
+    -webkit-text-stroke-color: #0E6898;
+    filter: drop-shadow(1px 1px 65px #0E6898); }
 .content-subheading {
   font-family: "Work Sans", sans-serif;
   font-size: 20px;

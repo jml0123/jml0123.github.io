@@ -102,17 +102,20 @@ section {
         font-weight: 900;
         margin-bottom: 0;
         font-size: 3.5em;
-        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-width: 1.66px;
         letter-spacing: 1.35px;
         color: $headerColor;
         &--work {
             -webkit-text-stroke-color: $headerColorAccent1;
+            filter: drop-shadow(1px 1px 65px $headerColorAccent1);
         }
         &--bio {
             -webkit-text-stroke-color: $headerColorAccent2;
+            filter: drop-shadow(1px 1px 65px $headerColorAccent2);
         }
         &--contact {
             -webkit-text-stroke-color: $headerColorAccent3;
+            filter: drop-shadow(1px 1px 65px $headerColorAccent3);
         }
     }
     &-subheading {

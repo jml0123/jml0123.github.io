@@ -291,7 +291,7 @@ section {
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 100%;
+            border-radius: 20px;
     
         }
         p {
@@ -313,6 +313,7 @@ section {
             height: 100%;
             text-align: center;
             text-decoration: none;
+    
         
         }
         img {
@@ -321,11 +322,11 @@ section {
             max-width: 100%;
             opacity: 0.8;
             filter: $contentDropShadowDefault;
-            border-radius: 5px;
+            border-radius: 20px;
             border: 1px solid black;
             &:hover {
                 opacity: 1;
-                transform: scale(1.033);
+                //transform: scale(1.033);
             }
         }
         &--1 { grid-area: 1 / 2 / 3 / 5; }

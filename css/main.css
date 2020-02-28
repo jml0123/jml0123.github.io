@@ -206,7 +206,7 @@ section {
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 100%; }
+      border-radius: 20px; }
     .grid-item p {
       filter: drop-shadow(-5px -2.5px 12px rgba(0, 0, 0, 0.25));
       font-weight: 400;
@@ -231,11 +231,10 @@ section {
       max-width: 100%;
       opacity: 0.8;
       filter: drop-shadow(-5px -2.5px 12px rgba(0, 0, 0, 0.25));
-      border-radius: 5px;
+      border-radius: 20px;
       border: 1px solid black; }
       .grid-item img:hover {
-        opacity: 1;
-        transform: scale(1.033); }
+        opacity: 1; }
     .grid-item--1 {
       grid-area: 1 / 2 / 3 / 5; }
     .grid-item--2 {

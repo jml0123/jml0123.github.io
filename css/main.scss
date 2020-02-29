@@ -107,6 +107,8 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    
 }
 
 
@@ -125,6 +127,8 @@ section {
        
     }
     &[role="content"] {
+        max-width: 100vw;
+        overflow-x: hidden;
         flex-basis: 60vh;
         flex: 1;
     }
@@ -247,6 +251,7 @@ section {
 }
 
 .slide-img {
+    border-radius: 20px;
     text-align: center;
     max-width: 100%;
     filter: $contentDropShadowDefault; 
@@ -269,19 +274,18 @@ section {
     padding: $paddingDefault;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
     grid-gap: 1.33%;
-    margin: 0 auto;
+    margin: 1em auto;
     div {
         display: flex;
         justify-content: center;
         align-items: center;
         transition: 100ms ease-in-out;
         flex-direction: column;
-        cursor: pointer;
-        &:hover {
-            background: $slideColor1;
-        }
+    
     }
     &-item{
         position: relative;
@@ -301,31 +305,33 @@ section {
             margin: 0 auto;
             border-radius: 1px;
             text-align: center;
-            position: absolute;
+            //position: absolute;
+            max-width: 100%;
+            word-wrap: break-word;
             color: black;
-            bottom: 5%;
             font-family: $fontPrimary;
-            font-size: 110%;
+            font-size: 75%;
             background: #e6e6e6;
         }
         a {
-            width: 100%;
-            height: 100%;
             text-align: center;
             text-decoration: none;
     
         
         }
         img {
+            cursor: pointer;
             transition: 100ms ease-in;
             min-height: 100%;
             max-width: 100%;
-            opacity: 0.8;
+            max-height: 500px;
+            object-fit:cover; 
+            opacity: 0.94;
             filter: $contentDropShadowDefault;
             border-radius: 20px;
             border: 1px solid black;
             &:hover {
-                opacity: 1;
+                opacity: 0.66;
                 //transform: scale(1.033);
             }
         }
@@ -351,9 +357,9 @@ section {
         }
         h1 {
             position: absolute;
-            font-size: 150%;
-            width: 49%;
-            right: 7%;
+            font-size: 123%;
+            width: 60%;
+            right: 4.66%;
             line-height: 1.3;
             font-weight: normal;
             font-family: $fontPrimary;
@@ -412,7 +418,7 @@ footer {
     }
     &-wrapper {
         p {
-            font-size: 1.22em;
+            font-size: 120%;
             line-height: $contentLineHeight;
             width: 89%;  
         }
@@ -433,11 +439,11 @@ footer {
         }
     }
     &-wrapper {
+        z-index: 2;
         height: 100%;
         width: 100%;
     }
     &-form {
-     
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -499,8 +505,10 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1;
+        z-index: 2;
         img {
+            object-fit: cover;
+            border-radius: 100%;
             position: absolute;
             width: 150%;
             max-width: 888px;
@@ -582,6 +590,8 @@ footer {
     main {
         flex-direction: row;
         flex-wrap: wrap;
+        max-width: 1500px;
+        margin: 0 auto;
     
     }
     body {
@@ -596,9 +606,10 @@ footer {
 
     
     section {
+   
         flex-direction: row;
         padding: 1%;
-        &[role='content-header'] {
+        &[role="content-header"] {
             margin-top: 0;
             padding-top: 75px;
             align-items: left;
@@ -607,11 +618,11 @@ footer {
             min-width: 480px;
             width: 60%;   
         }
-        &[role='content'] {
+        &[role="content"] {
             flex-wrap: wrap;
             width: 100%;
             display:block;
-    
+            overflow-x: initial;
         }
    
     }
@@ -667,7 +678,9 @@ footer {
     }
 
     .globe {
-        display: block
+        display: block;
+        &-wrapper {
+        }
     }
     
     .nav {

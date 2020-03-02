@@ -13,5 +13,5 @@ randomizeParticle = (target) => {
 document.addEventListener("DOMContentLoaded", function(){
     const particles = document.querySelectorAll(".particles li")
     particles.forEach(randomizeParticle);
-    particles.addEventListener ("animationend", particles.forEach(randomizeParticle))
+
   });

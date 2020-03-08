@@ -176,6 +176,7 @@ section {
     margin-left: 5%; }
 
 .carousel {
+  display: none;
   width: 100%;
   text-align: center; }
   .carousel h3 {
@@ -773,8 +774,10 @@ footer {
 
   .intro {
     overflow: hidden; }
-    .intro-wrapper h1 {
-      font-size: 180%;
-      width: 49%; } }
+    .intro-wrapper {
+      width: 76%; }
+      .intro-wrapper h1 {
+        font-size: 180%;
+        width: 49%; } }
 
 /*# sourceMappingURL=main.css.map */

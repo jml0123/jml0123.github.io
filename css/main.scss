@@ -260,6 +260,7 @@ section {
 
 
 .carousel {
+    display:none;
     width: 100%;
     text-align: center;
     h3 {
@@ -1097,6 +1098,7 @@ footer {
 .intro {
     overflow: hidden;
     &-wrapper {
+        width: 76%;
         h1 {
             font-size: 180%;
             width: 49%;

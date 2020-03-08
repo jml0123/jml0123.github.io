@@ -375,6 +375,7 @@ section {
     border-radius: 10px;
     min-width: 100%;
     min-height: 100%;
+    top: 0;
     position: absolute;
     opacity: 0.9;
     background: 
@@ -397,7 +398,10 @@ section {
     grid-gap: 1.33%;
 
     &-item {
-
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.92));
         transition: 100ms ease;
         height: 100%;
         justify-content: center;
@@ -515,7 +519,7 @@ section {
                 width: 100%;
                 margin: 0 auto;
                 color: white;
-                background: rgba(12, 12, 12, 0.88);
+                //background: rgba(12, 12, 12, 0.88);
                 margin: 5px auto;
                 text-align: left;
 
@@ -532,7 +536,7 @@ section {
             max-height: 63vh;
             min-height: 480px;
             object-fit:cover;
-             
+            opacity: 0;
 
             //border: 1px solid black;
         }

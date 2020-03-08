@@ -735,7 +735,9 @@ footer {
         justify-content: space-between;
         padding: $paddingDefault;
 
-    
+        label {
+            display: none;
+        }
         input {
 
             border: 0;

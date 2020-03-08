@@ -525,6 +525,8 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 22px; }
+  .contact-form label {
+    display: none; }
   .contact-form input {
     border: 0;
     background: #e6e6e6;

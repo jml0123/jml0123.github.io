@@ -377,7 +377,7 @@ section {
       max-height: 63vh;
       min-height: 480px;
       object-fit: cover;
-      opacity: 0; }
+      opacity: 1; }
     .grid-item--1 {
       grid-area: 1 / 1 / 2 / 6; }
     .grid-item--2 {

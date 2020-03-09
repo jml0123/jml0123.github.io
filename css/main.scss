@@ -52,6 +52,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    max-height: 100%;
     z-index: 0;
     transform: translateZ(0);
     margin: 0 auto;
@@ -154,12 +155,7 @@ body {
         }
     }
  
-    .hamburger-menu {
-        display: none;
-        position: absolute;
-        right: 0;
-        margin: 0 15px;
-    }
+
     &-logo {
 
         img {
@@ -183,9 +179,10 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-bottom: 5%;
-    height: auto;
-    max-height: 100vh;
+    
+}
+.intro {
+    margin: 0 auto;
 }
 
 
@@ -195,17 +192,17 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
+
     &[role="content-header"] {
+        margin-top: 10.75%;
         display: flex;
         flex-direction: column;
         padding: $paddingDefault;
         min-height: 20vh;
         flex-shrink: 0;
-        margin-top: 10.75%;
        
     }
     &[role="content"] {
-        max-width: 100vw;
         overflow-x: hidden;
         flex-basis: 60vh;
         flex: 1;
@@ -352,7 +349,6 @@ section {
             margin: 25px 0 0 0;
         } 
     }  
-  
 }
 
 .slide-img {
@@ -391,7 +387,6 @@ section {
 
 
 .grid {
-    margin: 2% auto;
     padding: $paddingContent;
     position: relative;
     display: grid;
@@ -400,7 +395,12 @@ section {
     grid-auto-rows: minmax(200px, auto);
     grid-auto-flow: dense;
     grid-gap: 1.33%;
-    height: auto;
+    height: 100%;
+    
+    &-wrapper {
+        margin: 2% auto 180px auto;
+        min-width: 100%;
+    }
     &-item {
         background: linear-gradient(
             to bottom,
@@ -925,8 +925,6 @@ footer {
     main {
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 2000px;
-
     
     }
     body {
@@ -942,7 +940,7 @@ footer {
     
     section {
         cursor: default;
-        margin: 0 0 0 5%;
+        margin: 0 5%;
         flex-direction: row;
         //padding: 1%;
         &[role="content-header"] {
@@ -959,9 +957,7 @@ footer {
             width: 100%;
             display:block;
             overflow: visible;
-
         }
-   
     }
     .bio, .contact {
         > div { 
@@ -1016,8 +1012,7 @@ footer {
 
     .grid {
         grid-gap: 2.5%;
-        padding: $paddingDefault;
-        width: 100%; 
+  
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             //grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(5, minmax(200px, auto));   
@@ -1029,6 +1024,10 @@ footer {
             h3 {
                 font-size: 20px;
             }
+        }
+        &-wrapper {
+            margin: 0 auto;
+            padding: $paddingDefault;
         }
         &-item {
 

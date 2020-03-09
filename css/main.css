@@ -6,7 +6,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   background: #FFFCF9;
-  max-height: 100vh;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: column; }
@@ -113,10 +113,13 @@ body {
     overflow: hidden; }
 
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 5%; }
+  padding-bottom: 5%;
+  height: auto;
+  max-height: 100vh; }
 
 section {
   z-index: 1;
@@ -268,6 +271,7 @@ section {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.92)); }
 
 .grid {
+  margin: 2% auto;
   padding: 11px;
   position: relative;
   display: grid;
@@ -275,11 +279,13 @@ section {
   grid-template-rows: repeat(5, 1fr);
   grid-auto-rows: minmax(200px, auto);
   grid-auto-flow: dense;
-  grid-gap: 1.33%; }
+  grid-gap: 1.33%;
+  height: auto; }
   .grid-item {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.92));
     transition: 100ms ease;
     height: 100%;
+    min-height: 480px;
     justify-content: center;
     transition: 100ms ease-in-out;
     align-items: center;
@@ -425,7 +431,8 @@ section {
     .links-wrapper--slide .live, .links-wrapper--slide .repo {
       color: white; }
   .links-wrapper--contact {
-    width: 100%; }
+    padding: 22px;
+    font-size: 88%; }
     .links-wrapper--contact .live, .links-wrapper--contact .repo {
       font-family: "Work Sans", sans-serif;
       font-weight: bold;
@@ -531,13 +538,13 @@ footer {
   .contact-form label {
     display: none; }
   .contact-form input {
+    padding: 3.33%;
     border: 0;
     background: #e6e6e6;
     min-width: 70px;
-    font-size: 117%;
+    font-size: 100%;
     height: 40px;
-    margin-bottom: 22px;
-    text-align: center; }
+    margin-bottom: 22px; }
     .contact-form input[name="name"] {
       flex-basis: 36.66%; }
     .contact-form input[name="email"] {
@@ -557,6 +564,8 @@ footer {
       cursor: pointer; }
       .contact-form input[type="submit"]:hover {
         background: #FF523B; }
+    .contact-form input::placeholder {
+      color: #2b2b2b; }
   .contact-form textarea {
     border: 0;
     background: #e6e6e6;
@@ -565,8 +574,10 @@ footer {
     width: 100%;
     height: 17vh;
     max-height: 400px;
-    font-size: 117%;
+    font-size: 100%;
     font-family: "Roboto", sans-serif; }
+    .contact-form textarea::placeholder {
+      color: #2b2b2b; }
 
 .globe {
   display: none; }
@@ -652,8 +663,7 @@ footer {
   main {
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 2000px;
-    margin: 0 auto; }
+    max-width: 2000px; }
 
   body {
     flex-direction: row; }

@@ -1,6 +1,7 @@
 /* Look into webkit overflow scrolling */
 
 $contentFontSize: 117%;
+$contentFontSizeSm: 100%;
 $paddingDefault: 22px;
 $paddingContent: 11px;
 $contentLineHeight: 1.3;
@@ -36,14 +37,16 @@ body {
     font-family: sans-serif;
     margin: 0;
     background: $defaultBg;
-    max-height: 100vh;
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
 
+
+
 }
 .particles {
-    overflow:hidden;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -176,12 +179,13 @@ body {
 
 
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-bottom: 5%;
-
-    
+    height: auto;
+    max-height: 100vh;
 }
 
 
@@ -387,16 +391,16 @@ section {
 
 
 .grid {
+    margin: 2% auto;
     padding: $paddingContent;
     position: relative;
     display: grid;
-    //grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-auto-rows: minmax(200px, auto);
     grid-auto-flow: dense;
     grid-gap: 1.33%;
-
+    height: auto;
     &-item {
         background: linear-gradient(
             to bottom,
@@ -404,17 +408,15 @@ section {
             rgba(0, 0, 0, 0.92));
         transition: 100ms ease;
         height: 100%;
+        min-height: 480px;
         justify-content: center;
         transition: 100ms ease-in-out;
         align-items: center;
         display: flex;
         position: relative;
         flex-direction: column;
-        //border: 2px solid red;
         border-radius: 10px;
         overflow: hidden;
-        //-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        //-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
         box-shadow: $gridBoxShadow;
         border: 2px solid $gridItemBorder;
         &--1 { grid-area: 1 / 3 / 3 / 6; }
@@ -537,8 +539,6 @@ section {
             min-height: 480px;
             object-fit:cover;
             opacity: 1;
-
-            //border: 1px solid black;
         }
 
         &--1 { grid-area: 1 / 1 / 2 / 6; }
@@ -597,7 +597,8 @@ section {
         }
     }
     &--contact {
-        width: 100%;
+        padding: $paddingDefault;
+        font-size: 88%;
         .live, .repo {
             font-family: $fontPrimary;
             font-weight: bold;
@@ -739,18 +740,18 @@ footer {
         justify-content: space-between;
         padding: $paddingDefault;
 
+   
         label {
             display: none;
         }
         input {
-
+            padding: 3.33%;
             border: 0;
             background: #e6e6e6;
             min-width: 70px;
-            font-size: $contentFontSize;
+            font-size: $contentFontSizeSm;
             height: 40px;
             margin-bottom: 22px;
-            text-align: center;
       
             &[name="name"] {
                 flex-basis: 36.66%;
@@ -774,9 +775,12 @@ footer {
                 cursor: pointer;
                 &:hover{ 
                     background: $slideColor3;
-                }
-                
+                } 
             }
+            &::placeholder {
+                color: $bodyTextColor;
+            }
+    
         }
         textarea {
             border: 0;
@@ -787,8 +791,11 @@ footer {
             width: 100%;
             height: 17vh;
             max-height: 400px;
-            font-size: $contentFontSize;
+            font-size: $contentFontSizeSm;
             font-family: $fontSecondary;
+            &::placeholder {
+                color: $bodyTextColor;
+            }
         }
     }
 }
@@ -919,7 +926,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         max-width: 2000px;
-        margin: 0 auto;
+
     
     }
     body {

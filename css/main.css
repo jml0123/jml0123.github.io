@@ -491,8 +491,8 @@ footer {
   border-radius: 100%; }
   .cta-wrapper--fixed {
     position: fixed;
-    right: 5%;
-    bottom: 2.5%;
+    right: 2.5vw;
+    bottom: 2.5vh;
     z-index: 1; }
 
 .contact-img {

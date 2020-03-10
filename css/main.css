@@ -488,11 +488,15 @@ footer {
   flex-shrink: 0; }
 
 .cta-wrapper {
-  border-radius: 100%; }
+  border-radius: 100%;
+  margin: 0;
+  padding: 0; }
   .cta-wrapper--fixed {
+    margin: 0;
+    padding: 0;
     position: fixed;
-    right: 2.5vw;
-    bottom: 2.5vh;
+    right: 1.75vw;
+    bottom: 1.25vw;
     z-index: 1; }
 
 .contact-img {

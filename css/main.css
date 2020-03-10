@@ -117,6 +117,18 @@ main {
 .intro {
   margin: 0 auto; }
 
+header {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 10.75%;
+  padding: 22px;
+  min-height: 20vh;
+  flex-shrink: 0;
+  align-items: center; }
+
 section {
   z-index: 1;
   width: 100%;
@@ -154,7 +166,8 @@ section {
     filter: drop-shadow(0.5px 0.5px 100px rgba(14, 104, 152, 0.66)); }
   .content-heading-wrapper {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
 .content-subheading {
   font-family: "Work Sans", sans-serif;
   font-size: 20px;
@@ -668,6 +681,17 @@ footer {
     height: 100%;
     width: 120px; }
 
+  header {
+    cursor: default;
+    margin: 0 5%;
+    flex-direction: row;
+    padding-top: 75px;
+    align-items: left;
+    height: 95px;
+    max-width: 580px;
+    min-width: 480px;
+    width: 60%; }
+
   section {
     cursor: default;
     margin: 0 5%;
@@ -700,17 +724,18 @@ footer {
         flex-direction: column; }
   .content-subheading {
     margin: 0 0 0 5%;
-    width: 98%;
+    width: 100%;
     padding: 0 auto;
     margin: 0 auto;
     text-align: left; }
     .content-subheading--contact {
-      width: 50%;
+      width: 90%;
       margin-left: 8%; }
     .content-subheading-wrapper {
       margin-left: 9%;
       text-align: left; }
       .content-subheading-wrapper--contact {
+        width: 100%;
         margin-left: 0; }
 
   .carousel {

@@ -185,6 +185,18 @@ main {
     margin: 0 auto;
 }
 
+header {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 10.75%;
+    padding: $paddingDefault;
+    min-height: 20vh;
+    flex-shrink: 0;
+    align-items: center;
+}
 
 section {
     z-index: 1;
@@ -235,6 +247,7 @@ section {
         &-wrapper {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
     }
     &-subheading {
@@ -937,6 +950,17 @@ footer {
         width: 120px;
     }
 
+    header {
+            cursor: default;
+            margin: 0 5%;
+            flex-direction: row;
+            padding-top: 75px;
+            align-items: left;
+            height: 95px;
+            max-width: 580px;
+            min-width: 480px;
+            width: 60%;   
+    }
     
     section {
         cursor: default;
@@ -980,18 +1004,19 @@ footer {
         }
         &-subheading {
             margin: 0 0 0 5%;
-            width: 98%;
+            width: 100%;
             padding: 0 auto;
             margin: 0 auto;
             text-align: left;
             &--contact {
-                width: 50%;
+                width: 90%;
                 margin-left: 8%;
             }
             &-wrapper {
                 margin-left: 9%;
                 text-align: left;
                 &--contact{
+                    width: 100%;
                     margin-left: 0;
                 }
             }

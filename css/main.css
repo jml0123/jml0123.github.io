@@ -123,14 +123,14 @@ section {
   display: flex;
   flex-direction: column;
   position: relative; }
-  section[role="content-header"] {
+  section[aria-label="content-header"] {
     margin-top: 10.75%;
     display: flex;
     flex-direction: column;
     padding: 22px;
     min-height: 20vh;
     flex-shrink: 0; }
-  section[role="content"] {
+  section[aria-label="content"] {
     overflow-x: hidden;
     flex-basis: 60vh;
     flex: 1; }
@@ -664,8 +664,7 @@ footer {
   body {
     flex-direction: row; }
 
-  header {
-    position: relative;
+  .nav-wrapper {
     height: 100%;
     width: 120px; }
 
@@ -673,7 +672,7 @@ footer {
     cursor: default;
     margin: 0 5%;
     flex-direction: row; }
-    section[role="content-header"] {
+    section[aria-label="content-header"] {
       margin-top: 0;
       padding-top: 75px;
       align-items: left;
@@ -681,7 +680,7 @@ footer {
       max-width: 580px;
       min-width: 480px;
       width: 60%; }
-    section[role="content"] {
+    section[aria-label="content"] {
       flex-wrap: wrap;
       width: 100%;
       display: block;
@@ -753,9 +752,11 @@ footer {
     display: block; }
 
   .nav {
-    height: 100%;
+    min-height: 100%;
     width: 120px;
     position: fixed; }
+    .nav-wrapper {
+      position: relative; }
     .nav ul {
       height: 85%;
       width: 100%;

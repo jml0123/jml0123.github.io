@@ -16,38 +16,35 @@
                     <li><a href="bio.html"><img src="https://img.icons8.com/cotton/64/000000/standing-man--v1.png" alt="about"></a></li>
                     <li><a href="contact.html"><img src="https://img.icons8.com/ios-filled/50/000000/composing-mail.png" alt="contact"></a></li>
             </ul>
-            <div class="nav-logo nav-logo-wrapper"><img src="img/logo-placeholder.png" alt="main-logo"></div>
         </nav>
     </div>
     <main>
         <header aria-label="content-header">
-            <div class="content-heading-wrapper content-heading-wrapper--contact">
-               <h1 class="content-heading content-heading--contact">Contact</h1>
-               <div class="content-subheading-wrapper content-subheading-wrapper--contact">
-                   <div class="contact-img-wrapper"><img src="img/smiley.png" class="contact-img" alt="Contact Img Smile Icon"></div>
-                   <h2 class="content-subheading content-subheading--contact">Let's make something happen</h2>
-                   
-               </div>
-            </div>
+            <div class="content-heading-wrapper">
+                <h1 class="content-heading content-heading--contact">Contact</h1>
+                <div class="content-subheading-wrapper">
+                    <h2 class="content-subheading">Let's make it happen</h2>
+                </div>
+             </div>
         </header>
         <section role="region" aria-label="content">
             <div class="globe-wrapper">
-                <img class="globe" src="img/contact.gif" alt="8-bit Gif">
+                <img class="globe" src="https://media.giphy.com/media/xT4Ap97OFVWnBRwPAc/giphy.gif" alt="8-bit Gif">
             </div>
         </section>
         <section role="region" aria-label="content-2" class="contact">
             <div class="contact-wrapper">
                
-                <form class="contact-form">
+                <form class="contact-form" method="POST" action="https://formspree.io/xdowpyyr">
                     <label for="name">Name</label>
                     <input type="text" name="name" placeholder="Name" id="name">
                     <label for="email">E-mail</label>
-                    <input type="text" name="email" placeholder="E-mail" id="email">
+                    <input type="text" name="_replyto" placeholder="E-mail" id="email">
                     <label for="subject">Subject</label>
-                    <input type="text" name="topic" placeholder="Let's work together!" id="subject">
+                    <input type="text" name="topic" placeholder="Subject (e.g. Let's work together!)" id="subject">
                     <label for="textarea">Details</label>
-                    <textarea placeholder="Add more details here..." rows="5" id="textarea"></textarea>
-                    <input type="submit" value="Submit">
+                    <textarea placeholder="Your Message" name="message" rows="5" id="textarea"></textarea>
+                    <input type="submit" value="Send">
                 </form>
                 <div class="links-wrapper links-wrapper--contact">
                    <a class="live" target="_blank" href="https://github.com/jml0123">GitHub</a>

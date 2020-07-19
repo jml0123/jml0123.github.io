@@ -57,23 +57,35 @@ body {
     margin: 0 auto;
 
     li {
-        -webkit-box-shadow:$gridBoxShadowLight;
-        -moz-box-shadow: $gridBoxShadowLight;
-        box-shadow: $gridBoxShadowLight;
+        max-width: 77px;
+        max-height: 77px;
         position: absolute;
         list-style: none;
         display: block;
-        background: $headerColorAccent3;
-        bottom: -10.5vw;
+        background: transparent;
+        bottom: -100px;
         animation: bubbles 1s infinite;
         transition-timing-function: linear;
-        border-radius: 100%;
-        mix-blend-mode: multiply;
+        //border-radius: 14px;
+        border: 1px dashed rgb(230, 230, 230);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //mix-blend-mode: multiply;
         &:nth-child(even) {
-            background: $headerColorAccent3;
         }
         &:nth-child(odd) {
-            background: $headerColorAccent2;
+        }
+        img {
+            padding: 7px;
+            position: relative;
+            z-index: -2 !important;
+            max-width: 100%;
+            transition: 120ms ease-in;
+            filter: $contentDropShadowLighter;
+            &:hover {
+                transform: scale(1.33);
+            }
         }
     }
 }
@@ -109,7 +121,6 @@ body {
         }
     }
 }
-
 
 .works {
     overflow: auto;
@@ -609,7 +620,7 @@ section {
                 background: rgba(255,255,255, 0.92);
                 color: black;
                 text-decoration: none;
-                animation: bgFlicker 888ms linear 2;
+                animation: bgFlicker 888ms linear 1;
            
             }
         }
@@ -728,7 +739,7 @@ footer {
             img {
                 border-radius: 100%;
                 max-width: 100%;
-                border: 2.33px solid  $bodyTextColor;
+                border: 2px solid  #0f0f0f;
                 filter: $contentDropShadowLighter;
                
             }    
@@ -769,12 +780,11 @@ footer {
         ::placeholder {
             color: rgb(155, 155, 155)
         }
-        
         label {
             display: none;
         }
         input {
-            padding: 3.33%;
+            padding: 15px;
             border: 0;
             background: #e6e6e6;
             min-width: 70px;
@@ -783,7 +793,9 @@ footer {
             margin-bottom: 22px;
       
             &[name="name"] {
-                flex-basis: 36.66%;
+                flex-basis: 20.66%;
+                flex-grow: 2;
+                margin-right: 5px;
             }
             &[name="email"]{
                 flex-basis: 60%;
@@ -809,7 +821,6 @@ footer {
         }
         textarea {
             border: 0;
-
             background: #e6e6e6;
             text-align: left;
             padding: 3%;
@@ -818,7 +829,6 @@ footer {
             max-height: 400px;
             font-size: $contentFontSizeSm;
             font-family: $fontSecondary;
-    
         }
     }
 }
@@ -893,7 +903,11 @@ footer {
     0% {
         transform: translateY(0) scale(1);
     }
+    22% {
+        background: rgba(0,0,255,0.01);
+    }
     100% {
+        background: rgba(0,255,0,1);
         transform: translateY(-120vh) scale(0.44);
         opacity: 0.95;
     }
@@ -1047,14 +1061,48 @@ footer {
         border: 2px dashed grey;
         background: transparent;
         display: block;
-        border-radius: 20px;
+        border-radius: 2px;
         color: $bodyTextColor;
         box-shadow: none;
     }
     .blank-work:hover {
-        background: $slideColor2;
+        border: none;
+        background:$slideColor2;
         color: white;
+        [class|="confetti"]{
+            display: block
+        }
     }
+
+    [class|="confetti"] {
+        position: absolute;
+        display: none;
+    }
+    
+    $colors: ($slideColor3,$slideColor4, $slideColor1, white);
+    
+    @for $i from 0 through 50 {
+        $w: random(8);
+        $l: random(100);
+        .confetti-#{$i} {
+        width: #{$w}px;
+        height: #{$w*1.33}px;
+        background-color: nth($colors, random(4));
+        top: -10%;
+        left: unquote($l+"%");
+        opacity: random() + 0.5;
+        transform: rotate(#{random()*360}deg);
+        animation: drop-#{$i} unquote(4+random()+"s") unquote(random()+"s") infinite;
+        }
+    
+        @keyframes drop-#{$i} {
+        100% {
+            top: 110%;
+            left: unquote($l+random(15)+"%");
+        }
+        }
+    }
+
 
     .grid {
         display: grid;
@@ -1131,7 +1179,6 @@ footer {
             border: 0;
             img {
                 border-radius: 100%;
-                border: 2px solid black;
                 max-width: 100%;
             }
         }

@@ -691,7 +691,7 @@ footer {
     flex-shrink: 0;
 }
 
-.cta-wrapper {
+.cta-wrapper {   
     display: none;
     border-radius: 100%;
     margin: 0;
@@ -728,11 +728,13 @@ footer {
 
 
 .bio {
+    
     &-container {
         display: flex;
         flex-direction: column;
         align-items: left;
         padding: $paddingDefault; 
+        
         &--image {
             min-width: 150px;
             width: 53%;
@@ -838,24 +840,29 @@ footer {
 
 .globe {
     display: none;
- 
+    padding: 7%;
+    margin-left: -8vw;
     &-wrapper {
-        width: 100%;
-        position: absolute;
-        height: 100vh;
+        min-width: 60%;
+        max-width: 60%;
+        position: fixed;
+        min-height: 100vh;
+        max-height: 100vh;
         opacity: 0.66;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 2;
-
+  
+        //overflow: hidden;
+        
         img {
             object-fit: cover;
             border-radius: 100%; 
             position: absolute;
-            width: 150%;
+            width: 62vw;
             max-width: 888px;
-            min-width: 650px;
+            min-width: 420px;
             filter: $contentDropShadowLighter;
         }
     }
@@ -966,6 +973,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
     
+    
     }
     body {
         flex-direction: row;
@@ -975,7 +983,7 @@ footer {
         height: 100%;
         width: 120px;
     }
-
+ 
     header {
             cursor: default;
             margin: 0 5%;
@@ -1011,10 +1019,11 @@ footer {
     }
     .bio, .contact {
         > div { 
-            margin-top: 11vh;
+            margin-top: 7vh;
             position: absolute;
         }
     }
+  
 
     .content {
         &-heading {

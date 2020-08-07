@@ -39,9 +39,19 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+}
 
-
-
+.label {
+    margin: 0 0.4em;
+    padding: 0.2em 0.4em;
+    border-radius: 20px;
+    &-progress{
+        font-size: 13px;
+        background: #C2E0C6;
+        &::after{
+            content: " ♨️"
+        }
+    }
 }
 .particles {
     overflow: hidden;
@@ -264,7 +274,7 @@ section {
         }
     }
     &-subheading {
-        font-family: $fontPrimary;
+        font-family: "Source Code Pro", monospace;;
         font-size: 20px;
         font-weight: 500;
         width: 75%;
@@ -569,7 +579,6 @@ section {
 }
 
 .grid-contact {
- 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -579,7 +588,7 @@ section {
     p {
         max-width: 66%;
         font-size: $contentFontSize;
-        font-family: $fontSecondary;
+        font-family: "Source Code Pro", monospace;
     }
 }
 
@@ -759,11 +768,13 @@ footer {
         flex-direction: column;
         align-items: left;
         padding: $paddingDefault; 
+       
         
         &--image {
             min-width: 150px;
             width: 53%;
             max-width: 190px;
+            margin: 0 auto;
             img {
                 //border-radius: 100%;
                 max-width: 100%;
@@ -1073,7 +1084,6 @@ footer {
             padding: 0 auto;
             margin: 0 auto;
             text-align: left;
-            font-family: "Source Code Pro", monospace;
             
             &--contact {
                 width: 90%;
@@ -1111,7 +1121,11 @@ footer {
     .blank-work:hover {
         border: none;
         background:$slideColor2;
-        color: white;
+        color: $slideColor2;
+        p {
+
+            background: black;
+        }
         [class|="confetti"]{
             display: block
         }

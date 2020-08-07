@@ -130,7 +130,7 @@ body {
 .nav {
     filter: $contentDropShadowLighter;
     background: $defaultBg;
-    border: 0.5px solid #eeeeee;
+    border-bottom: 0.5px solid #f0f0f0;
     z-index: 2;
     width: 100vw;
     min-height: 59px;
@@ -649,9 +649,22 @@ section {
 
 .intro {
     overflow: hidden;
+    &-img-wrapper {
+        position: absolute;
+        opacity: 0;
+        top: -50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        img{
+            margin: 0 auto;
+            height: 133px;
+        }
+    }
     &-content-wrapper {
         //background: grey;
         position: absolute;
+        z-index: 5;
         width: 100%;
         min-height: 200px;
         display: flex;
@@ -672,12 +685,25 @@ section {
         }
  
         h1 {
+            cursor: default;
             margin-top: 50px;
             font-size: $contentFontSize;
             min-width: 100%;
-            line-height: 1.33;
+            line-height: 1.44;
             font-weight: normal;
-            font-family: $fontPrimary;
+            font-family: "Source Code Pro", monospace;
+        }
+        .name-span {
+            padding: 0 0.2em;
+            font-weight: bold;
+            color: $slideColor2;
+            background: #0f0f0f;
+            &:hover {
+                cursor: pointer;
+                &~ .intro-img-wrapper {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
@@ -728,7 +754,6 @@ footer {
 
 
 .bio {
-    
     &-container {
         display: flex;
         flex-direction: column;
@@ -740,10 +765,10 @@ footer {
             width: 53%;
             max-width: 190px;
             img {
-                border-radius: 100%;
+                //border-radius: 100%;
                 max-width: 100%;
-                border: 2px solid  #0f0f0f;
-                filter: $contentDropShadowLighter;
+                //border: 2px solid  #0f0f0f;
+                -webkit-filter: drop-shadow(5px 5px 5px #e6e6e6);
                
             }    
         }
@@ -758,6 +783,11 @@ footer {
             max-width: 1650px;
             font-size: 120%;
         }
+    }
+}
+.interests{
+    ul {
+        line-height: 1.5em;
     }
 }
 
@@ -1043,6 +1073,8 @@ footer {
             padding: 0 auto;
             margin: 0 auto;
             text-align: left;
+            font-family: "Source Code Pro", monospace;
+            
             &--contact {
                 width: 90%;
                 margin-left: 8%;
@@ -1164,6 +1196,7 @@ footer {
     }
     
     .nav {
+        border-right: 0.5px solid #f0f0f0;
         min-height: 100%;
         width: 120px;
         position: fixed;
@@ -1188,7 +1221,6 @@ footer {
             padding: 0;
             border: 0;
             img {
-                border-radius: 100%;
                 max-width: 100%;
             }
         }

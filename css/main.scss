@@ -660,14 +660,14 @@ section {
     overflow: hidden;
     &-img-wrapper {
         position: absolute;
-        opacity: 0;
-        top: -50%;
+        top: -10%;
         width: 100%;
-        display: flex;
+        display: none;
         align-items: center;
         img{
             margin: 0 auto;
             height: 133px;
+            display: none
         }
     }
     &-content-wrapper {
@@ -698,7 +698,7 @@ section {
             margin-top: 50px;
             font-size: $contentFontSize;
             min-width: 100%;
-            line-height: 1.44;
+            line-height: 1.25;
             font-weight: normal;
             font-family: "Source Code Pro", monospace;
         }
@@ -710,7 +710,7 @@ section {
             &:hover {
                 cursor: pointer;
                 &~ .intro-img-wrapper {
-                    opacity: 1;
+                    display: flex;
                 }
             }
         }
@@ -1016,6 +1016,8 @@ footer {
     
     
     }
+
+
     body {
         flex-direction: row;
 
@@ -1057,6 +1059,14 @@ footer {
             display:block;
             overflow: visible;
         }
+    }
+
+    .intro-img-wrapper {
+        top: -50%;
+        img {
+        display: block
+        }
+        
     }
     .bio, .contact {
         > div { 
@@ -1328,5 +1338,11 @@ footer {
             max-height: none;
         }
        
+    }
+}
+
+@media (max-height: 600px){ 
+    .intro-content-2 {
+        display: none;
     }
 }

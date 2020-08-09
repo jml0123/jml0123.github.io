@@ -58,7 +58,7 @@ body {
         white-space: initial;
         margin: 0;
         color: black;
-        background: $gridItemBorder;
+        background: $defaultBg
     }
 }
 .particles {
@@ -518,7 +518,7 @@ section {
                     color: #0f0f0f;
                     letter-spacing: 1px;
                     //text-transform: uppercase;
-                    background: rgba(255,255,255, 0.88);
+                    background: rgba(255,255,255, 0.67);
                     font-family: $fontSecondary;
                     filter: $contentDropShadowDefault;
                     //border-radius: 10px;
@@ -705,15 +705,16 @@ section {
             margin-top: 50px;
             font-size: $contentFontSize;
             min-width: 100%;
-            line-height: 1.25;
+            line-height: 1.26;
             font-weight: normal;
             font-family: "Source Code Pro", monospace;
         }
         .name-span {
-            padding: 0 0.2em;
-            font-weight: bold;
+            padding: 0 0.3em;
             color: $slideColor2;
-            background: #0f0f0f;
+            background: #1a1a1a;
+            //filter: drop-shadow(0.88px 0.88px 55px $headerColorAccent1);
+            
             &:hover {
                 cursor: pointer;
                 &~ .intro-img-wrapper {
@@ -1153,7 +1154,7 @@ footer {
     }
     
     .label-tech {
-        font-size: 13px;
+        font-size: 12px;
     }
     $colors: ($slideColor3,$slideColor4, $slideColor1, white);
     

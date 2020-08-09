@@ -54,7 +54,7 @@ body {
         }
     }
     &-tech{
-        font-size: calc(9.2px + 6 * ((100vw - 320px) / 680));
+        font-size: calc(8.75px + 6 * ((100vw - 320px) / 680));
         white-space: initial;
         margin: 0;
         color: black;
@@ -511,12 +511,12 @@ section {
                 .details {
                     display: inline-block;
                     margin: 0 0 0 2%;
-                    padding: 2px 8px;
+                    padding: 2px 2.66px;
                     width: auto;
                     text-align: left;
                     //font-size: 11.33px;
                     color: #0f0f0f;
-                    letter-spacing: 1px;
+                    letter-spacing: initial;
                     //text-transform: uppercase;
                     background: rgba(255,255,255, 0.67);
                     font-family: $fontSecondary;
@@ -1218,6 +1218,10 @@ footer {
         }
         img {
             max-height: 46.66vh;
+        }
+        .details{
+            padding: 2px 8px !important;
+            letter-spacing: 1px;
         }
        
 

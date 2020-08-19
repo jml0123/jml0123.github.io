@@ -11,10 +11,10 @@
     <div class="nav-wrapper">
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="index.html"><img src="https://img.icons8.com/material-rounded/24/000000/prefab-house.png" alt="home"></a></li>
-                    <li><a href="work.html"><img src="https://img.icons8.com/ios-glyphs/30/000000/grid-2.png" alt="work"></a></li>
-                    <li><a href="bio.html"><img src="https://img.icons8.com/cotton/64/000000/standing-man--v1.png" alt="about"></a></li>
-                    <li><a href="contact.html"><img src="https://img.icons8.com/ios-filled/50/000000/composing-mail.png" alt="contact"></a></li>
+                <li><a href="index.html" id="home-icon" ><img src="img/icons/property.png" alt="home"/></a></li>
+                    <li><a href="work.html" id="work-icon" ><img src="img/icons/www.png" alt="work"></a></li>
+                    <li><a href="bio.html" id="bio-icon"><img src="img/icons/mario.png"  alt="about"></a></li>
+                    <li><a href="contact.html" id="outreach-icon" ><img src="img/icons/email.png" alt="contact"></a></li>
             </ul>
         </nav>
     </div>
@@ -44,11 +44,13 @@
                     <input type="text" name="topic" placeholder="Subject (e.g. Let's work together!)" id="subject">
                     <label for="textarea">Details</label>
                     <textarea placeholder="Your Message" name="message" rows="5" id="textarea"></textarea>
-                    <input type="submit" value="Send">
+                    <input type="submit" value=">_post" id="send-btn">
                 </form>
-                <div class="links-wrapper links-wrapper--contact">
-                   <a class="live" target="_blank" href="https://github.com/jml0123">GitHub</a>
-                   <a class="live" target="_blank" href="https://www.linkedin.com/in/jml123">LinkedIn</a>
+                <div class="links-wrapper links-wrapper--contact" id="contact-links">
+                   <a class="live" target="_blank" href="https://github.com/jml0123"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="Github"></a>
+                   
+                   <a class="live" target="_blank" href="https://www.linkedin.com/in/jml123"><img src="img/linkedin.png" alt="Linkedin"></a>
+                   
                    <a class="live" href="mailto:jml921@nyu.edu?subject=Let's%20work%20together!" >jml921@nyu.edu</a>
                 </div>
             </div>

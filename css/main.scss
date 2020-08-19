@@ -31,7 +31,21 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
   }
 
 
+#work-icon {
+    cursor: url('../img/cursors/plant.cur'), auto;
+}
+#bio-icon {
+    cursor: url('../img/cursors/arizona.cur'), auto;
+}
+.live > img {
+    max-height: 25px;
+    max-width: 25px;
+}
+#contact-links {
+    width: 375px;
+}
 body {
+    cursor: url('../img/cursors/cursor.cur'), auto;
     font-family: sans-serif;
     margin: 0;
     background: $defaultBg;
@@ -40,6 +54,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
 
 .label {
     margin: 0 0.4em;
@@ -148,7 +164,7 @@ body {
 .nav {
     filter: $contentDropShadowLighter;
     background: $defaultBg;
-    border-bottom: 0.5px solid #f0f0f0;
+    border-bottom: 1px dotted #d6d6d6;
     z-index: 2;
     width: 100vw;
     min-height: 59px;
@@ -176,10 +192,10 @@ body {
                 max-width: 30px;
                 max-height: 30px;
                 transition: 100ms linear;
-                filter: $contentDropShadowLighter;
+                filter: $contentDropShadowDefault;
                 &:hover {
                     transform: scale(1.08);
-                    filter: none;
+                    filter: $contentDropShadowLighter;
                 }
             }
          
@@ -214,6 +230,7 @@ main {
 }
 .intro {
     margin: 0 auto;
+
 }
 
 header {
@@ -282,10 +299,11 @@ section {
         }
     }
     &-subheading {
-        font-family: "Source Code Pro", monospace;;
+        font-family: "Source Code Pro", monospace;
         font-size: 20px;
         font-weight: 500;
         width: 75%;
+        filter: $contentDropShadowDefault;
         &-wrapper {
             height: auto;
             padding: 1.5vh 0;
@@ -605,7 +623,6 @@ section {
 }
 
 .links-wrapper {
-
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -696,6 +713,7 @@ section {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        color: #0f0f0f;
         div {
             position: relative;
         }
@@ -703,7 +721,7 @@ section {
         h1 {
             cursor: default;
             margin-top: 50px;
-            font-size: $contentFontSize;
+            font-size: 23.1px;
             min-width: 100%;
             line-height: 1.26;
             font-weight: normal;
@@ -711,10 +729,10 @@ section {
         }
         .name-span {
             padding: 0 0.3em;
-            color: $slideColor2;
-            background: #1a1a1a;
-            //filter: drop-shadow(0.88px 0.88px 55px $headerColorAccent1);
-            
+            color: whitesmoke;
+            background: #0f0f0f;
+            filter: $contentDropShadowLighter;
+    
             &:hover {
                 cursor: pointer;
                 &~ .intro-img-wrapper {
@@ -857,18 +875,21 @@ footer {
                 width: 100%;
             }
             &[type="submit"] {
-                transition: 200ms linear;
+                -webkit-appearance: none;
+                filter: $contentDropShadowLighter;
+                font-family: "Source Code Pro", monospace;
+                transition: 100ms linear;
                 color: white;
                 box-shadow: none;
                 border: 0;
                 padding: 0;
-                background: $slideColor2;
+                background: #0f0f0f;
                 margin: 5% auto 0;
                 width: 150px;
                 border-radius: $btnBorderRadius;
                 cursor: pointer;
                 &:hover{ 
-                    background: $slideColor3;
+                    background:$slideColor2;
                 } 
             }
         }
@@ -1028,7 +1049,6 @@ footer {
 
     body {
         flex-direction: row;
-
     }
     .nav-wrapper {
         height: 100%;
@@ -1048,7 +1068,6 @@ footer {
     }
     
     section {
-        cursor: default;
         margin: 0 5%;
         flex-direction: row;
         //padding: 1%;
@@ -1235,7 +1254,7 @@ footer {
     }
     
     .nav {
-        border-right: 0.5px solid #f0f0f0;
+        border-right: 1px dotted #d6d6d6;
         min-height: 100%;
         width: 120px;
         position: fixed;

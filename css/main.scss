@@ -251,6 +251,7 @@ main {
 }
 .intro {
     margin: 0 auto;
+    
 
 }
 
@@ -703,6 +704,7 @@ section {
 
 .intro {
     overflow: hidden;
+    height: 100vh;
     &-img-wrapper {
         position: absolute;
         top: -10%;

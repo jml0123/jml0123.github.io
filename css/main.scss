@@ -859,8 +859,7 @@ footer {
     }
     &-wrapper {
         z-index: 2;
-        width: 100%; 
-  
+        width: 100%;
     }
     &-form {
         display: flex;
@@ -1064,10 +1063,7 @@ footer {
     main {
         flex-direction: row;
         flex-wrap: wrap;
-    
-    
     }
-
 
     body {
         flex-direction: row;
@@ -1088,7 +1084,6 @@ footer {
             min-width: 480px;
             width: 60%;   
     }
-    
     section {
         margin: 0 5%;
         flex-direction: row;
@@ -1328,9 +1323,10 @@ footer {
     }
 }
 .contact {
+    width: 40%;
     &-wrapper {
         height: 100%;
-        width: 40%;
+        width: 100%;
     }
     &-form {
         padding: 0;

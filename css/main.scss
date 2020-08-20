@@ -1056,6 +1056,9 @@ footer {
 }
 
 @media  (min-width: 1024px) {
+    .blur-bg {
+        display: none;
+    }
     nav {
         background: $defaultBg;
     }

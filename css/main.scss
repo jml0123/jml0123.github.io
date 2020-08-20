@@ -61,6 +61,10 @@ html {
     height: -webkit-fill-available;
 }
 
+.contact-body, .intro-body {
+    max-height: 100vh !important;
+}
+
 
 .label {
     margin: 0 0.4em;
@@ -710,11 +714,12 @@ section {
         align-items: left;
     }
     &-wrapper {
-        padding: $paddingDefault;
+        outline: 1px solid red;
         display: flex;
         margin: 0 auto;
         width: 91%;
         height: 100vh;
+        overflow: hidden;
         align-items: center;
         justify-content: center;
         flex-direction: column;

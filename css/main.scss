@@ -63,6 +63,7 @@ html {
 
 .contact-body, .intro-body {
     max-height: 100vh !important;
+    min-height: -webkit-fill-available;
 }
 
 

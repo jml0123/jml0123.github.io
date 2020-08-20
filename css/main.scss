@@ -44,6 +44,7 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
 #contact-links {
     width: 375px;
 }
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -52,8 +53,13 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
+html {
+    height: -webkit-fill-available;
+}
 
 
 .label {
@@ -828,8 +834,7 @@ footer {
 }
 
 
-.contact {
-    //padding-top: 10%;
+.contact {   
     &-img-wrapper{
         width: 44px;
         img {
@@ -837,10 +842,9 @@ footer {
         }
     }
     &-wrapper {
+        height: auto;
         z-index: 2;
-        height: 100%;
-        width: 100%;
-        
+        width: 100%;        
     }
     &-form {
         display: flex;
@@ -1100,6 +1104,10 @@ footer {
             position: absolute;
         }
     }
+    .contact {
+        position: absolute;
+        top: 25%;
+    }
   
 
     .content {
@@ -1271,6 +1279,7 @@ footer {
     }
 
 .bio {
+    height: 100%;
     &-container { 
         &--image {
             margin: 0;

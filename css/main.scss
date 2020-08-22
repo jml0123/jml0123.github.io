@@ -63,15 +63,16 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
         animation-iteration-count: infinite;
         transform-origin: right;
         animation-timing-function: linear;
+
     }
     #track-info {
         width: auto;
-        padding: 0 0.3em;
-        margin: 0 0.3em;
+        padding-right: 0.3em;
+        margin-right: 0.3em;
     }
     #now-playing  {
         color: white;
-        padding: 0 0.75em;
+        padding-left: 0.75em;
         border-radius: 5px;
         &:span {
             margin-left: 0.5em

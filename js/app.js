@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
         `<a href=${data.url}>
                 <div class="badge">
                         <p class="badge-details">
-                        <span id="now-playing">Now Playing<span role="img"aria-label="music-note">&nbsp🎵</span/></span>
+                        <span role="img"aria-label="music-note">&nbsp🎵</span/><span id="now-playing">Now Playing: </span>
                         <span id="track-info">${data.artist} - ${data.track}</span>
                         </p>
                 </div>

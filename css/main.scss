@@ -31,6 +31,53 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
   }
 
 
+.spotify-now-playing-widget {
+    height: 4.66vw;
+    max-height: 33px;
+    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    display: flex;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .badge {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+        border-radius: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: "Source Code Pro", monospace;
+    }
+    .badge-details {
+        background: $slideColor2;
+        padding: 0;
+        margin: 0;
+        border-radius: 20px;
+        animation-name: scroll;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        transform-origin: right;
+        animation-timing-function: linear;
+    }
+    #track-info {
+        width: auto;
+        padding: 0 0.3em;
+        margin: 0 0.3em;
+    }
+    #now-playing  {
+        color: white;
+        padding: 0 0.75em;
+        border-radius: 5px;
+        &:span {
+            margin-left: 0.5em
+        }
+    }
+}
 #work-icon {
     cursor: url('../img/cursors/plant.cur'), auto;
 }
@@ -158,26 +205,26 @@ html {
         z-index: 1;
         border: 0;
         //background: blue;
-        img {
-            filter: $contentDropShadowLighter;
-            transition: 88ms linear;
-            min-width:20px;
-            min-height: 20px;
-            width: 4.66vw;
-            height: 4.66vw;
-            max-width: 33px;
-            max-height: 33px;
-            margin: 1% 25px 0 0;
-            border: 0;
-            border-radius: 100%;;
-            cursor: pointer;
-            &:hover {
-                opacity: 0.55;
-            }
-        }
     }
 }
 
+.socials-icon {
+    filter: $contentDropShadowLighter;
+    transition: 88ms linear;
+    min-width:20px;
+    min-height: 20px;
+    width: 4.66vw;
+    height: 4.66vw;
+    max-width: 33px;
+    max-height: 33px;
+    margin: 1% 25px 0 0;
+    border: 0;
+    border-radius: 100%;;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.55;
+    }
+}
 .works {
     overflow: auto;
     max-height: none;
@@ -744,7 +791,7 @@ section {
         h1 {
             cursor: default;
             margin-top: 50px;
-            font-size: 23.1px;
+            font-size: 135%;
             min-width: 100%;
             line-height: 1.26;
             font-weight: normal;
@@ -997,6 +1044,20 @@ footer {
     }
 }
 
+@keyframes scroll {
+    0% {  
+        transform: translateX(110%);
+        opacity: 1;    }
+    90% {  
+        transform: translateX(-105%);
+        opacity: 1;
+    }
+    100% {  
+        transform: translateX(-130%);
+        opacity: 0;
+    }
+}
+
 
 @keyframes bubbles {
     0% {
@@ -1058,6 +1119,20 @@ footer {
 }
 
 @media  (min-width: 1024px) {
+    .spotify-now-playing-widget {
+        .badge {
+            max-width: none;
+            width: 100%;
+            color: black;
+        }
+        .badge-details{
+            //background: transparent;
+        }
+        #now-playing {
+            color: white
+        }
+    }
+   
     .blur-bg {
         display: none;
     }

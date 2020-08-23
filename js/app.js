@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
         <div class="spotify-now-playing-widget">
         <a href=${data.url}>
                 <div class="badge">
-                        <p class="badge-details">
+                        <p class="badge-details" style="animation-duration: ${7.33 + (data.artist.length + data.track.length) * 0.1}s">
                         <span role="img"aria-label="music-note">&nbsp🎵</span/><span id="now-playing">Now Playing: </span>
                         <span id="track-info">${data.artist} - ${data.track}</span>
                         </p>
@@ -26,11 +26,14 @@ document.addEventListener("DOMContentLoaded", function(){
         `
         if (songData){
                 console.log(`~~ NOW PLAYING: ${data.track} by ${data.artist} ~~`)
+                console.log(7.33 + (data.artist.length + data.track.length) * 0.1)
+                const template = `
+                ${songData}
+                `
+                socialsDiv.innerHTML += template;
+                console.log(badgeWidth)
         }
-        const template = `
-        ${songData}
-        `
-        socialsDiv.innerHTML += template;
+
     }).catch(err => {
         console.log(err)
     })

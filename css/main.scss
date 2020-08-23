@@ -34,6 +34,7 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
 .spotify-now-playing-widget {
     height: 4.66vw;
     max-height: 33px;
+    min-height: 20px;
     font-size: calc(10px + 6 * ((100vw - 320px) / 680));
     align-items: center;
     flex-wrap: nowrap;

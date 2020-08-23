@@ -32,6 +32,8 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
 
 
 .spotify-now-playing-widget {
+    border-radius:20px;
+    transform: translateZ(0);
     height: 4.66vw;
     max-height: 33px;
     min-height: 20px;
@@ -48,6 +50,7 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
         padding: 0;
         margin: 0;
         width: 100%;
+        transform: translateZ(0);
         max-width: none;
         border-radius: 20px;
         white-space: nowrap;
@@ -56,6 +59,7 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
     }
     .badge-details {
         background: $slideColor2;
+        transform: translateZ(0);
         padding: 0;
         margin: 0;
         border-radius: 20px;
@@ -74,7 +78,6 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
     #now-playing  {
         color: white;
         padding-left: 0.75em;
-        border-radius: 5px;
         &:span {
             margin-left: 0.5em
         }
@@ -369,6 +372,8 @@ section {
             filter: drop-shadow(0.5px 0.5px 100px $headerColorAccent3);
         }
         &-wrapper {
+            animation: fadeInLeft 0.88s;
+            animation-iteration-count: 1;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -1253,8 +1258,7 @@ footer {
             padding: 0 auto;
 
           &-wrapper {
-              animation: fadeInLeft 0.88s;
-              animation-iteration-count: 1;
+       
               flex-direction: row;
               align-items: left;
               &--contact{

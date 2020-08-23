@@ -79,20 +79,17 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
         }
     }
 }
-#work-icon {
-    cursor: url('../img/cursors/plant.cur'), auto;
-}
-#bio-icon {
-    cursor: url('../img/cursors/arizona.cur'), auto;
-}
+
 .live > img {
     max-height: 25px;
     max-width: 25px;
 }
 #contact-links {
-    height: 100px;
+    width: 100%;
+    animation: fadeInLeft 1.75s;
+    animation-iteration-count: 1;
+    height: 125px;
     padding-top: $paddingDefault;
-    width: 375px;
 }
 
 body {
@@ -197,6 +194,8 @@ html {
 
 .socials {
     &-wrapper {
+        animation: fadeInLeft 1.7s;
+        animation-iteration-count: 1;
         //background: blue;
         display: flex;
         flex-direction: row;
@@ -298,9 +297,15 @@ main {
     
 }
 .intro {
+    position: fixed;
     margin: 0 auto;
-    
+}
 
+.title-bar {
+    font-size: 42px;
+    font-weight: 800;
+    font-family: "Work Sans", sans-serif;
+    padding: 0.17em 0 0.55em 0;
 }
 
 header {
@@ -753,20 +758,10 @@ section {
 .intro {
     overflow: hidden;
     height: 100vh;
-    &-img-wrapper {
-        position: absolute;
-        top: -10%;
-        width: 100%;
-        display: none;
-        align-items: center;
-        img{
-            margin: 0 auto;
-            height: 133px;
-            display: none
-        }
-    }
     &-content-wrapper {
-        //background: grey;
+        animation: fadeIn 1s;
+        animation-iteration-count: 1;
+        opacity: 1;
         position: absolute;
         z-index: 5;
         width: 100%;
@@ -788,32 +783,41 @@ section {
         div {
             position: relative;
         }
- 
         h1 {
+            margin: 0;
+            padding: 0;
             cursor: default;
-            margin-top: 50px;
             font-size: 135%;
             min-width: 100%;
             line-height: 1.26;
             font-weight: normal;
             font-family: "Source Code Pro", monospace;
+            margin-bottom: 0.88em;
         }
         .name-span {
             padding: 0 0.3em;
             color: whitesmoke;
             background: #0f0f0f;
             filter: $contentDropShadowLighter;
-    
-            &:hover {
-                cursor: pointer;
-                &~ .intro-img-wrapper {
-                    display: flex;
-                }
-            }
         }
     }
 }
 
+
+.intro-img-wrapper {
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: block;
+    align-items: left;
+    justify-content: flex-start;
+    img{
+        margin: 0 auto;
+        height: 129px;
+    }
+}
 footer {
     display: none;
     min-height: 95px;
@@ -1119,6 +1123,32 @@ footer {
     }
 }
 
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+    } to { 
+        opacity: 1; 
+    }
+}
+
+
+@keyframes fadeInLeft {
+    0% { 
+        opacity: 0; 
+        transform: translateX(50px)
+    } 
+    60% {
+        opacity: 0;
+        transform: translateX(7px)
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0px)
+        
+    }
+}
+
 @media  (min-width: 1024px) {
     .spotify-now-playing-widget {
         .badge {
@@ -1132,6 +1162,22 @@ footer {
         #now-playing {
             color: white
         }
+    }
+
+
+.intro-img-wrapper {
+    img{
+        height: 142px;
+    }
+    
+}
+
+    .title-bar {
+        font-size: 47px;
+        font-weight: 800;
+        font-family: "Work Sans", sans-serif;
+        padding: 0.4em 0 0.55em 0;
+
     }
    
     .blur-bg {
@@ -1166,6 +1212,8 @@ footer {
             width: 60%;   
     }
     section {
+        animation: fadeIn 0.66s;
+        animation-iteration-count: 1;
         margin: 0 5%;
         flex-direction: row;
         //padding: 1%;
@@ -1186,13 +1234,6 @@ footer {
         }
     }
 
-    .intro-img-wrapper {
-        top: -50%;
-        img {
-        display: block
-        }
-        
-    }
     .bio, .contact {
         > div { 
             margin-top: 7vh;
@@ -1209,7 +1250,10 @@ footer {
         &-heading {
             margin: 0;
             padding: 0 auto;
+
           &-wrapper {
+              animation: fadeInLeft 0.88s;
+              animation-iteration-count: 1;
               flex-direction: row;
               align-items: left;
               &--contact{
@@ -1417,9 +1461,10 @@ footer {
 
 
 .intro {
+
     overflow: hidden;
     &-wrapper {
-        width: 76%;
+        width: 66%;
         max-width: 1650px;
         h1 {
             font-size: 180%;

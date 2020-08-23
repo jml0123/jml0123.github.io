@@ -326,6 +326,8 @@ header {
 }
 
 section {
+    animation: fadeIn 0.66s;
+    animation-iteration-count: 1;
     z-index: 1;
     width: 100%;
     display: flex;
@@ -1218,8 +1220,7 @@ footer {
             width: 60%;   
     }
     section {
-        animation: fadeIn 0.66s;
-        animation-iteration-count: 1;
+  
         margin: 0 5%;
         flex-direction: row;
         //padding: 1%;

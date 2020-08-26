@@ -967,6 +967,7 @@ footer {
         label {
             display: none;
         }
+    
         input {
             padding: 15px;
             border: 0;
@@ -1021,7 +1022,9 @@ footer {
     }
 }
 
-
+.form-heading {
+    display: none;
+}
 .globe {
     display: none;
     padding: 7%;
@@ -1569,6 +1572,9 @@ footer {
     }
   }
 
+.form-heading {
+    display: block
+}
 
 .intro {
 

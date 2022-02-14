@@ -221,8 +221,8 @@ html {
     min-height: 20px;
     width: 4.66vw;
     height: 4.66vw;
-    max-width: 33px;
-    max-height: 33px;
+    max-width: 32px;
+    max-height: 32px;
     margin: 1% 25px 0 0;
     border: 0;
     border-radius: 100%;;
@@ -1290,7 +1290,7 @@ footer {
 
     .title-bar {
         font-size: 47px;
-        font-weight: 800;
+        font-weight: 500;
         font-family: $fontPrimary;
         padding: 0.4em 0 0.55em 0;
         mix-blend-mode: $mixBlend1;

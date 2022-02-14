@@ -16,20 +16,27 @@ $gridItemBorderNight: #494739;
 $gridItemBorder: #9a9e9b;
 $gridBoxShadow: 2px 10px 16px 0px rgba(5, 5, 5, 0.25);
 $gridBoxShadowLight: 3px 15px 24px 0px rgba(5, 5, 5, 0.366);
-$slideColor1: #3694C7;
-$slideColor2: linear-gradient(0.25turn, #6E32FF, #6f6dfa);
-$slideColor3: #FF523B;
-$slideColor4: #FFA53B;
+$slideColor1: #3a3a3a;
+$slideColor2: linear-gradient(0.25turn, #BC0100, #90B2E6);
+$slideColor3: rgb(238, 226, 121);
+$slideColor4: #445adb;
 $headerColor: transparent;
-$headerColorAccent1: rgba(13,207,64, 0.66);
+$headerColorAccent1: rgba(1,134,255, 0.66);
 $headerColorAccent2: rgba(240,177,9,0.66);
 $headerColorAccent3: rgba(14,104,152, 0.66);
 $bodyTextColor: #2b2b2b;
 $subtleBlack: rgba(12, 12, 12, 0.88);
+$linksColor: #0186FF;
 
 * {
     box-sizing: border-box;
   }
+
+.art-caption {
+    font-size: 12px;
+    color: $gridItemBorderNight;
+    font-style: italic;
+}
 
 .grid, .bio-container--image {
     animation: fadeIn 0.55s;
@@ -39,12 +46,12 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
     display: none;
 }
 .spotify-now-playing-widget {
-    border-radius:20px;
+    border-radius: 2px;
     transform: translateZ(0);
     height: 4.66vw;
     max-height: 33px;
     min-height: 20px;
-    font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(10px + 6 * ((100vw - 320px) / 700));
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
@@ -59,17 +66,18 @@ $subtleBlack: rgba(12, 12, 12, 0.88);
         width: 100%;
         transform: translateZ(0);
         max-width: none;
-        border-radius: 20px;
+        border-radius: 2px;
         white-space: nowrap;
         overflow: hidden;
-        font-family: $fontHeaders
+        font-family: $fontHeaders;
+        font-size: 16.5px;
     }
     .badge-details {
         background: $slideColor2;
         transform: translateZ(0);
         padding: 0;
         margin: 0;
-        border-radius: 20px;
+        border-radius: 2px;
         animation-name: scroll;
         animation-duration: 12s;
         animation-iteration-count: infinite;
@@ -137,7 +145,7 @@ html {
 .label {
     margin: 0 0.4em;
     padding: 0.2em 0.4em;
-    border-radius: 20px;
+    border-radius: 5px;
     white-space: nowrap;
     &-progress{
         font-size: 13px;
@@ -946,6 +954,9 @@ footer {
     }
 }
 .interests{
+    a {
+        color: $linksColor;
+    }
     ul {
         line-height: 1.5em;
     }
@@ -1253,7 +1264,7 @@ footer {
 
 @media  (min-width: 1024px) {
     .spotify-now-playing-widget {
-        font-size: 23.5px;
+        font-size: 17px;
         .badge {
             max-width: none;
             width: 100%;
@@ -1272,13 +1283,13 @@ footer {
     position: absolute;
     right: 0;
     bottom: 0;
-    padding: 2vw;
+    padding: 1.35vw;
     animation: fadeInBottom 1.5s;
     z-index: -100;
     img {
-        width: 12vw;
-        max-width: 400px;
-        min-width: 100px;
+        width: 7.33vw;
+        max-width: 300px;
+        min-width: 75px;
     }
 }
 .intro-img-wrapper {
@@ -1417,8 +1428,8 @@ footer {
     }
     .blank-work:hover {
         border: none;
-        background:#32D85E;
-        color: #32D85E;
+        background-image:url('/img/cloud_img.jpeg');
+        color: #67A8DC;
         p {
 
             background: black;
@@ -1554,7 +1565,7 @@ footer {
     }
     &-wrapper {
         p {
-            font-size: 130%;
+            font-size: 120%;
             line-height: $contentLineHeight;
             width: 33%;  
         }

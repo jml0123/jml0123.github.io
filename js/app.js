@@ -1,3 +1,32 @@
+const shufflableArt = 
+        [
+                {
+                        file: 'hagihara_1.jpeg',
+                        caption: '萩原 卓哉 (Hagihara Takuya)'
+                }, 
+                { 
+                        file: 'hagihara_2.jpg',
+                        caption: '萩原 卓哉 (Hagihara Takuya)'
+                }, 
+                {
+                        file: 'hagihara_3.png',
+                        caption: '萩原 卓哉 (Hagihara Takuya)'
+                }, 
+                {
+                        file: 'Hagihara_4.jpg',
+                        caption: '萩原 卓哉 (Hagihara Takuya)'
+                },
+                {
+                        file: 'gustave_infernocanto32.jpg',
+                        caption: 'G.Dore, Inferno (Canto XXXII)'
+                },
+                {
+                        file: 'gustave_paradisocanto12.jpg',
+                        caption: 'G. Dore, Paradiso (Canto XII)'
+                },
+
+]
+
 randomizeParticle = (target) => {
         const width = target.style.width = `${32 + screen.width * 0.05}px`
         target.style.height = width;
@@ -6,6 +35,24 @@ randomizeParticle = (target) => {
         target.style.animationDuration = `${12 + Math.random() * 17}s`;
 }
 
+shuffleArtworkFrontPage = () => {
+        const frontArt = '.art-div1';
+        const imgRoot = 'img/artworks/';
+        const randomArtImg = shufflableArt[Math.floor(shufflableArt.length * Math.random())];
+        document.querySelector(frontArt).innerHTML = 
+        ` <img src="${imgRoot}${randomArtImg.file}">
+        <span class="art-caption">${randomArtImg.caption}</span>`
+}
+
+shuffleArtworkBio = () => {
+        const bioArt = '.art-div2'
+        const imgRoot = 'img/artworks/';
+        const randomArtImg = shufflableArt[Math.floor(shufflableArt.length * Math.random())];
+        document.querySelector(bioArt).innerHTML = 
+        ` <img src="${imgRoot}${randomArtImg.file}">
+        <span class="art-caption">${randomArtImg.caption}</span>`
+
+}
 document.addEventListener("DOMContentLoaded", function(){
     //const particles = document.querySelectorAll(".particles li")
     //particles.forEach(randomizeParticle);

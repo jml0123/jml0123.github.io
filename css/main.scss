@@ -32,10 +32,14 @@ $linksColor: #0186FF;
     box-sizing: border-box;
   }
 
+.art-div1, .art-div2 {
+    cursor: pointer;
+}
 .art-caption {
     font-size: 12px;
     color: $gridItemBorderNight;
     font-style: italic;
+    padding-top: 4px;
 }
 
 .grid, .bio-container--image {
@@ -1279,17 +1283,18 @@ footer {
     }
 
 .side-accent {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     right: 0;
     bottom: 0;
     padding: 1.35vw;
     animation: fadeInBottom 1.5s;
-    z-index: -100;
+    z-index: 1;
     img {
-        width: 7.33vw;
-        max-width: 300px;
-        min-width: 75px;
+        width: 8vw;
+        max-width: 500px;
+        min-width: 88px;
     }
 }
 .intro-img-wrapper {

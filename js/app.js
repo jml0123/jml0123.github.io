@@ -40,7 +40,7 @@ shuffleArtworkFrontPage = () => {
         const imgRoot = 'img/artworks/';
         const randomArtImg = shufflableArt[Math.floor(shufflableArt.length * Math.random())];
         document.querySelector(frontArt).innerHTML = 
-        ` <img src="${imgRoot}${randomArtImg.file}">
+        ` <img src="${imgRoot}${randomArtImg.file}" alt="${randomArtImg.file}">
         <span class="art-caption">${randomArtImg.caption}</span>`
 }
 
@@ -49,7 +49,7 @@ shuffleArtworkBio = () => {
         const imgRoot = 'img/artworks/';
         const randomArtImg = shufflableArt[Math.floor(shufflableArt.length * Math.random())];
         document.querySelector(bioArt).innerHTML = 
-        ` <img src="${imgRoot}${randomArtImg.file}">
+        ` <img src="${imgRoot}${randomArtImg.file}" alt="${randomArtImg.file}">
         <span class="art-caption">${randomArtImg.caption}</span>`
 
 }

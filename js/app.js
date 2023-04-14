@@ -24,6 +24,22 @@ const shufflableArt =
                         file: 'gustave_paradisocanto12.jpg',
                         caption: 'G. Dore, Paradiso (Canto XII)'
                 },
+                {
+                        file: 'downissue.webp',
+                        caption: 'Bosniak and Ektah - d o w n . i s s u e . 027 (2004)'
+                },
+                {
+                        file: 'dance2trance.jpeg',
+                        caption: 'Dance 2 Trance - Hello San Francisco'
+                },
+                {
+                        file: 'wipeout3menu.jpeg',
+                        caption: 'Wipeout 3 Game - Menu Screen'
+                },
+                {
+                        file: 'blame_art.jpegt',
+                        caption: 'Tsutomu Nihei - Blame! Page 61'
+                }
 
 ]
 
@@ -57,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //const particles = document.querySelectorAll(".particles li")
     //particles.forEach(randomizeParticle);
     const socialsDiv = document.querySelector(".socials-wrapper")  
-    fetch("https://serene-plains-09848.herokuapp.com/currently-playing",).then(res => res.json()).then(data => {
+    fetch("https://spotify-portfolio-widget.herokuapp.com/currently-playing",).then(res => res.json()).then(data => {
         const songData = !data.track? null :
         `
         <div class="spotify-now-playing-widget">

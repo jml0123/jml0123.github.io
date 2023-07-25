@@ -5,6 +5,28 @@ const getShuffleableArt = () => {
         return shufflableArt
 }
 
+const navDefaultStyle = () => {
+        const nav = document.querySelector('.nav');
+        console.log(nav);
+        nav.style.setProperty('--nav-margin-showing', '-15px');
+}
+
+const hideNav = () => {
+        const mq = window.matchMedia("(min-width: 1024px)");
+
+        const nav = document.querySelector('.nav');
+        const navMargin = getComputedStyle(nav).marginLeft; 
+        const navIsAlreadyHidden = navMargin === '-80px'
+
+        const navWrapper = document.querySelector('.nav-wrapper');
+        const isHoveringOverWrapper = navWrapper.parentNode.querySelector(":hover") == navWrapper;
+
+        if (mq.matches && !isHoveringOverWrapper && !navIsAlreadyHidden) {
+                console.log("hiding nav");
+                nav.style.setProperty('--nav-margin-showing', '-80px');
+        }
+}
+
 const randomizeParticle = (target) => {
         const width = target.style.width = `${32 + screen.width * 0.05}px`
         target.style.height = width;
@@ -36,6 +58,8 @@ export const shuffleArtworkBio = () => {
 document.addEventListener("DOMContentLoaded", function(){
     //const particles = document.querySelectorAll(".particles li")
     //particles.forEach(randomizeParticle);
+    navDefaultStyle();
+    setInterval(hideNav, 8000);
     const socialsDiv = document.querySelector(".socials-wrapper")  
     fetch("https://spotify-portfolio-widget.herokuapp.com/currently-playing",).then(res => res.json()).then(data => {
         const songData = !data.track? null :

@@ -1328,8 +1328,17 @@ footer {
         flex-direction: row;
     }
     .nav-wrapper {
-        height: 100%;
-        width: 120px;
+        height: 100vh;
+        width: 135px;
+    }
+    .nav-wrapper:hover > .nav {
+        margin-left: -17px;
+    }
+    .nav {
+        /* Allow collapse on mouse out */
+        margin-left: -17px;
+        margin-left: var(--nav-margin-showing);
+        transition: 0.4s;
     }
  
     header {
